@@ -1,0 +1,25 @@
+.logo {
+  position: relative;
+  text-align: center;
+  width: 5em;
+  font-family: "Oswald-SemiBold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px;
+
+  &::before {
+    position: absolute;
+    left: -0.6em;
+    content: "+";
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &::after {
+    position: absolute;
+    content: "+";
+    left: 1.5em;
+    font-size: inherit;
+    color: inherit;
+  }
+}

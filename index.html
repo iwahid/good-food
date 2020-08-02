@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная</title>
+
+  <link rel="stylesheet" href="css-output/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap">
+
+</head>
+
+<body>
+
+  <!-- Проект good-food -->
+  <!-- Здесь я буду описывать основные моменты, комментировать и обосновывать выбранные решения. -->
+  <!-- Здесь же буду указывать ошибки, которые были обнаружены мною в процессе вёрстки сайта -->
+
+
+  <!-- через миксины добавить стили для hover у почти всех ссылок -->
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- logo -->
+        <a href="#" class="logo header__logo">
+          GF
+        </a>
+
+        <div class="header__menu">
+          <nav class="header-menu">
+            <ul class="header-menu__list">
+
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#pizza"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Пицца</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#burgers"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Бургеры</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#sushi"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Суши</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#drinks"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Напитки</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__user-block">
+
+          <div class="user-block">
+
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#user"></use>
+              </svg>
+            </a>
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#wish-list"></use>
+              </svg>
+            </a>
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#cart"></use>
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+<!-- 
+  <section class="slider-section">
+    <img class="slider-section__img" src="components/sections/slide-1.jpg" alt="">
+  </section>
+   -->
+
+   <main>
+     <section class="catalog">
+       <div class="section__header">
+         <span class="section__title">пицца</span>
+       </div>
+       <div class="catalog__body">
+         <div class="catalog__content">
+           <div class="container">
+            <div class="catalog__filters">
+              <ul class="catalog__filters-list">
+                <li><button type="button" class="catalog__filters-type">Все</button></li>
+                <li><button type="button" class="catalog__filters-type">Мясная</button></li>
+                <li><button type="button" class="catalog__filters-type">Острая</button></li>
+                <li><button type="button" class="catalog__filters-type">С грибами</button></li>
+                <li><button type="button" class="catalog__filters-type">С моредпродуктами</button></li>
+              </ul>
+              <div class="catalog__filters-range">
+                <!-- селектор -->
+                selector
+              </div>
+             </div>
+           </div>
+           
+           <!-- контенер с карточками -->
+           <div class="container">
+
+            <div class="catalog__card-wrapper">
+<!-- сетка раскладки -->
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                 <div class="product-card__img">
+                   <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                 </div>
+
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                  25см 30см 45см
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Добавить в корзину</button>
+              </div>
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                  <div class="product-card__img">
+                    <img src="components/bloks/product-card/content-img/item-2.jpg" alt="Pizza">
+                  </div>
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Купить</button>
+              </div>
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                  <div class="product-card__img">
+                    <img src="components/bloks/product-card/content-img/item-3.jpg" alt="Pizza">
+                  </div>
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Купить</button>
+              </div>
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                  <div class="product-card__img">
+                    <img src="components/bloks/product-card/content-img/item-4.jpg" alt="Pizza">
+                  </div>
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Купить</button>
+              </div>
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                  <div class="product-card__img">
+                    <img src="components/bloks/product-card/content-img/item-5.jpg" alt="Pizza">
+                  </div>
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Купить</button>
+              </div>
+              <div class="product-card">
+                <a href="#" class="product-card__link">
+   
+                  <div class="product-card__img">
+                    <img src="components/bloks/product-card/content-img/item-6.jpg" alt="Pizza">
+                  </div>
+                 <p class="product-card__title">Пицца Фибоначи</p>
+                </a>
+   
+                <div class="product-card__composition">
+                  <span class="product-card__composition-item">Томатный соус</span>
+                  <span class="product-card__composition-item">Мацарела</span>
+                  <span class="product-card__composition-item">Перец Чили</span>
+                </div>
+   
+                <div class="product-card__select-form">
+                  <!-- здесь ещё нужно будет подумать о том, как реализовать выбор из доступных вариантов -->
+                </div>
+   
+                <div class="product-card__price">350</div>
+                <button class="product-card__add-cart">Купить</button>
+              </div>
+  
+             </div>
+             
+           </div>
+           
+
+         </div>
+       </div>
+     </section>
+   </main>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__subscribe-form">
+          <h4 class="footer__form-title">Подпишитесь на нашу рассылку
+            и узнавайте о акция быстрее</h4>
+          <form action="" class="footer__form">
+            <input type="email" placeholder="Введите ваш e-mail" class="footer__form-input">
+            <button class="footer__form-button" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="footer__information-list list-info">
+          <h3 class="visually-hidden">Полезная информация</h3>
+          <div class="list-info__section">
+            <h6 class="list-info__title">Информация</h6>
+            <ul class="list-info__list">
+              <li class="list-info__list-item"><a href="#">О компании</a></li>
+              <li class="list-info__list-item"><a href="#">Контакты</a></li>
+              <li class="list-info__list-item"><a href="#">Акции</a></li>
+              <li class="list-info__list-item"><a href="#">Магазины</a></li>
+            </ul>
+          </div>
+          <div class="list-info__section">
+            <h6 class="list-info__title">Интернет-магазин</h6>
+            <ul class="list-info__list">
+              <li class="list-info__list-item"><a href="#">Доставка и самовывоз</a></li>
+              <li class="list-info__list-item"><a href="#">Оплата</a></li>
+              <li class="list-info__list-item"><a href="#">Возврат-обмен</a></li>
+              <li class="list-info__list-item"><a href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__social-links">
+          <h3 class="visually-hidden">Наши социальные сети</h3>
+          <ul class="footer__social-buttons-list social-links">
+            <li class="social-links__item social-links__item_facebook">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_twitter">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_instagram">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_youtube">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#" class="footer__bottom-link">Договор оферты</a>
+        <a href="#" class="footer__bottom-link">Политика обработки персональных данных</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./cscc/common-parts/sliderjs/js/swiper.min.js"></script><!-- сама библиотека свайпера -->
+  <script src="./cscc/common-parts/sliderjs/js/slider.js"></script>
+  <!-- инициализация всех свайперов доступных на странице -->
+  <script src="cscc/search-section/script.js"></script><!-- контент в табах -->
+</body>
+
+</html>

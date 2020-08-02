@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Корзина</title>
+
+  <link rel="stylesheet" href="css-output/main.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap">
+
+</head>
+
+<body>
+
+  <!-- Проект good-food -->
+  <!-- Здесь я буду описывать основные моменты, комментировать и обосновывать выбранные решения. -->
+  <!-- Здесь же буду указывать ошибки, которые были обнаружены мною в процессе вёрстки сайта -->
+
+
+  <!-- через миксины добавить стили для hover у почти всех ссылок -->
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- logo -->
+        <a href="#" class="logo header__logo">
+          GF
+        </a>
+
+        <div class="header__menu">
+          <nav class="header-menu">
+            <ul class="header-menu__list">
+
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#pizza"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Пицца</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#burgers"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Бургеры</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#sushi"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Суши</span>
+                </a>
+              </li>
+              <li class="header-menu__item">
+                <a href="#" class="header-menu__link">
+                  <svg class="header-menu__item-img">
+                    <use href="components/bloks/header/icon/icons-sprite.svg#drinks"></use>
+                  </svg>
+                  <span class="header-menu__item-title">Напитки</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__user-block">
+
+          <div class="user-block">
+
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#user"></use>
+              </svg>
+            </a>
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#wish-list"></use>
+              </svg>
+            </a>
+            <a class="user-block__item" href="#">
+              <svg>
+                <use href="components/bloks/user-block/icons/icons-sprite.svg#cart"></use>
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+  <!-- 
+  <section class="slider-section">
+    <img class="slider-section__img" src="components/sections/slide-1.jpg" alt="">
+  </section>
+   -->
+
+  <main>
+    <section class="cart">
+      <div class="section__header">
+        <span class="section__title">Корзина</span>
+      </div>
+
+      <div class="cart__body">
+        <div class="container">
+
+          <div class="cart__table table">
+            <div class="table__header table-header">
+              <span class="table-header__product-name">Продукт</span>
+              <span class="table-header__product-price">Цена</span>
+              <span class="table-header__product-quantity">Количество</span>
+              <span class="table-header__product-subtotal">Сумма</span>
+              <span class="table-header__product-delete">Удалить</span>
+            </div>
+
+            <div class="table__body table-body ">
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              <div class="table__product-item product-item">
+                <div class="product-item__product">
+                  <div class="product-item__img">
+                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
+                  </div>
+                  <div class="product-item__info">
+                    <span class="product-item__name">Пицца Фибоначчи</span>
+                    <div class="product-item__params">
+                      <span>25см</span>
+                      <span>тонкая</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-item__price">
+                  350
+                </div>
+                <div class="product-item__counter">
+                  <!-- FIXME: здеь реализовать счётчик -->
+                  2
+                </div>
+                <div class="product-item__subtotal">
+                  700
+                </div>
+
+              </div>
+              
+            </div>
+         
+          </div>
+
+
+          <div class="cart__cheque cart-cheque">
+            <div class="cart-cheque__coupon">Введите купон</div>
+            <div class="cart-cheque__subtotal">Сумма</div>
+            <div class="cart-cheque__total">Итог</div>
+            <div class="cart-cheque__pay">
+              <button type="button">Оплатить</button><!-- пока не знаю как будет реализована оплата, и будет ли реализована в принципе. Поэтому, временно осталвю её кнопкой. -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+  </main>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__subscribe-form">
+          <h4 class="footer__form-title">Подпишитесь на нашу рассылку
+            и узнавайте о акция быстрее</h4>
+          <form action="" class="footer__form">
+            <input type="email" placeholder="Введите ваш e-mail" class="footer__form-input">
+            <button class="footer__form-button" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="footer__information-list list-info">
+          <h3 class="visually-hidden">Полезная информация</h3>
+          <div class="list-info__section">
+            <h6 class="list-info__title">Информация</h6>
+            <ul class="list-info__list">
+              <li class="list-info__list-item"><a href="#">О компании</a></li>
+              <li class="list-info__list-item"><a href="#">Контакты</a></li>
+              <li class="list-info__list-item"><a href="#">Акции</a></li>
+              <li class="list-info__list-item"><a href="#">Магазины</a></li>
+            </ul>
+          </div>
+          <div class="list-info__section">
+            <h6 class="list-info__title">Интернет-магазин</h6>
+            <ul class="list-info__list">
+              <li class="list-info__list-item"><a href="#">Доставка и самовывоз</a></li>
+              <li class="list-info__list-item"><a href="#">Оплата</a></li>
+              <li class="list-info__list-item"><a href="#">Возврат-обмен</a></li>
+              <li class="list-info__list-item"><a href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__social-links">
+          <h3 class="visually-hidden">Наши социальные сети</h3>
+          <ul class="footer__social-buttons-list social-links">
+            <li class="social-links__item social-links__item_facebook">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_twitter">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_instagram">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item social-links__item_youtube">
+              <a href="#">
+                <svg>
+                  <use href="cscc/common-parts/social-links/icon/icons-sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#" class="footer__bottom-link">Договор оферты</a>
+        <a href="#" class="footer__bottom-link">Политика обработки персональных данных</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./cscc/common-parts/sliderjs/js/swiper.min.js"></script><!-- сама библиотека свайпера -->
+  <script src="./cscc/common-parts/sliderjs/js/slider.js"></script>
+  <!-- инициализация всех свайперов доступных на странице -->
+  <script src="cscc/search-section/script.js"></script><!-- контент в табах -->
+</body>
+
+</html>

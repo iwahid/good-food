@@ -1,0 +1,28 @@
+.header {
+  color: $color-text-header;
+  font-size: 21px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 1px 5px 1px rgba($color: #3a3d49, $alpha: 0.5);
+  
+  &__inner {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__menu {
+    width: 400px;
+  }
+
+  &__user-block {
+    display: flex;
+  }
+}
