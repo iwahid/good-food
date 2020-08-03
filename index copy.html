@@ -112,9 +112,9 @@
         <span class="section__title">Корзина</span>
       </div>
 
-      <div class="cart__body">
-        <div class="container">
+      <div class="container">
 
+        <div class="cart__body">
           <div class="cart__table table">
             <div class="table__header table-header">
               <span class="table-header__product-name">Продукт</span>
@@ -148,6 +148,12 @@
                 <div class="product-item__subtotal">
                   700
                 </div>
+                <div class="product-item__delete-wrapper">
+                  <button type="button" class="product-item__delete">
+                    X
+                  </button>
+                </div>
+
 
               </div>
               <div class="table__product-item product-item">
@@ -173,6 +179,12 @@
                 <div class="product-item__subtotal">
                   700
                 </div>
+                <div class="product-item__delete-wrapper">
+                  <button type="button" class="product-item__delete">
+                    X
+                  </button>
+                </div>
+
 
               </div>
               <div class="table__product-item product-item">
@@ -198,6 +210,12 @@
                 <div class="product-item__subtotal">
                   700
                 </div>
+                <div class="product-item__delete-wrapper">
+                  <button type="button" class="product-item__delete">
+                    X
+                  </button>
+                </div>
+
 
               </div>
               <div class="table__product-item product-item">
@@ -223,6 +241,12 @@
                 <div class="product-item__subtotal">
                   700
                 </div>
+                <div class="product-item__delete-wrapper">
+                  <button type="button" class="product-item__delete">
+                    X
+                  </button>
+                </div>
+
 
               </div>
               <div class="table__product-item product-item">
@@ -234,6 +258,9 @@
                     <span class="product-item__name">Пицца Фибоначчи</span>
                     <div class="product-item__params">
                       <span>25см</span>
+                      <span>тонкая</span><span>25см</span>
+                      <span>тонкая</span><span>25см</span>
+                      <span>тонкая</span><span>25см</span>
                       <span>тонкая</span>
                     </div>
                   </div>
@@ -248,50 +275,41 @@
                 <div class="product-item__subtotal">
                   700
                 </div>
-
-              </div>
-              <div class="table__product-item product-item">
-                <div class="product-item__product">
-                  <div class="product-item__img">
-                    <img src="components/bloks/product-card/content-img/item-1.jpg" alt="Pizza">
-                  </div>
-                  <div class="product-item__info">
-                    <span class="product-item__name">Пицца Фибоначчи</span>
-                    <div class="product-item__params">
-                      <span>25см</span>
-                      <span>тонкая</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="product-item__price">
-                  350
-                </div>
-                <div class="product-item__counter">
-                  <!-- FIXME: здеь реализовать счётчик -->
-                  2
-                </div>
-                <div class="product-item__subtotal">
-                  700
+                <div class="product-item__delete-wrapper">
+                  <button type="button" class="product-item__delete">
+                    X
+                  </button>
                 </div>
 
+
               </div>
-              
             </div>
-         
+
           </div>
 
 
           <div class="cart__cheque cart-cheque">
-            <div class="cart-cheque__coupon">Введите купон</div>
-            <div class="cart-cheque__subtotal">Сумма</div>
-            <div class="cart-cheque__total">Итог</div>
+            <div class="cart-cheque__coupon">Введите купон
+              <span>345</span>
+            </div>
+            <div class="cart-cheque__pieces-count">Количество
+              <span>2</span>
+            </div>
+            <div class="cart-cheque__subtotal">Сумма
+              <span>345</span>
+            </div>
+            <div class="cart-cheque__total">Итог
+              <span>345</span>
+            </div>
             <div class="cart-cheque__pay">
-              <button type="button">Оплатить</button><!-- пока не знаю как будет реализована оплата, и будет ли реализована в принципе. Поэтому, временно осталвю её кнопкой. -->
+              <button type="button">Оплатить</button>
+              <!-- пока не знаю как будет реализована оплата, и будет ли реализована в принципе. Поэтому, временно осталвю её кнопкой. -->
             </div>
           </div>
         </div>
-
       </div>
+
+
 
 
     </section>

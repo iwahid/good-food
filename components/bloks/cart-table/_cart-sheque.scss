@@ -1,10 +1,92 @@
 .cart-cheque {
+  margin-top: 2rem;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  background-color: $color-bg;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  & ::after { 
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 8px;
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-image: url("/components/bloks/cart-table/cart-cheque.svg");
+  }
   &__coupon {
-}
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-bottom: $border-easy;  
+  }
+  &__pieces-count {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-bottom: $border-easy;
+
+    & span {
+      margin-right: 2.7rem;
+      &::before {
+        position: absolute;
+        content: "шт.";
+        right: 2rem;
+      }
+    }
+  }
   &__subtotal {
-}
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-bottom: $border-easy;
+    & span {
+      &::before {
+        position: absolute;
+        content: "₽";
+        margin-left: -1.5rem;
+      }
+    }
+  }
   &__total {
-}
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-bottom: $border-easy;
+    & span {
+      &::before {
+        position: absolute;
+        content: "₽";
+        margin-left: -1.5rem;
+      }
+    }
+  }
   &__pay {
-}
+    display: flex;
+    justify-content: flex-end; 
+    padding: 3rem 2rem;
+
+    & button {
+      width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    color: $color-text-header;
+    font-weight: 500;
+    background-color: $color-accent;
+    margin-top: auto;
+    
+    transition: 0.3s all ease-in;
+    }
+  }
 }

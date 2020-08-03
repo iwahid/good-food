@@ -1,19 +1,95 @@
 .product-item {
-
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: $border-easy;
   &__product {
-}
+    display: flex;
+    width: 46%;
+  }
   &__img {
-}
+    height: 8rem;
+    width: 8rem;
+    min-width: 8rem;
+    margin-right: 1rem;
+    
+    & img {
+      width: 100%;
+    }
+  }
   &__info {
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   &__name {
-}
-  &__params {
-}
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  &__params { 
+    color: $color-text-regular;
+    font-weight: 700;
+    font-size: 1.4rem;
+    & span {
+      padding-right: 1rem;
+    }
+
+    & span + span {
+      
+      position: relative;
+      &::before {
+        position: absolute;
+        content: ".";
+        bottom: 0.3rem;
+        left: -1rem;
+        
+      }
+    }
+  }
   &__price {
-}
+    
+    width: 13%;
+    margin-left: 3rem;
+    &::before {
+      position: absolute;
+      content: "₽";
+      margin-left: -1.5rem;
+    }
+  }
   &__counter {
-}
+    
+    width: 20%;
+  }
   &__subtotal {
-}
+    width: 10%;
+    &::before {
+      position: absolute;
+      content: "₽";
+      margin-left: -1.5rem;
+    }
+  }
+  &__delete-wrapper {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  &__delete {
+    position: relative;
+    font-family: Roboto, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    background-color: transparent;
+    border: none;
+    border: $border;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    
+    cursor: pointer;
+    color: red;
+  }
 }
