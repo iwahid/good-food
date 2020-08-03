@@ -1128,7 +1128,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.cart-cheque ::after {
+.cart-cheque::after {
   content: "";
   display: block;
   position: absolute;
