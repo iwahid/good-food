@@ -923,6 +923,47 @@ a:hover {
   margin-left: auto;
 }
 
+@media (max-width: 640px) {
+  .table-header {
+    /* на узких экранах отключаю столбец с ценой */
+  }
+  .table-header__product-name {
+    width: 54%;
+  }
+  .table-header__product-price {
+    width: 0;
+    display: none;
+  }
+  .table-header__product-quantity {
+    width: 25%;
+  }
+}
+
+@media (max-width: 540px) {
+  .table-header__product-name {
+    width: 44%;
+  }
+  .table-header__product-quantity {
+    width: 25%;
+  }
+  .table-header__product-subtotal {
+    width: 16%;
+  }
+}
+
+@media (max-width: 540px) {
+  .table-header__product-name {
+    width: 59%;
+  }
+  .table-header__product-quantity {
+    width: 30%;
+  }
+  .table-header__product-subtotal {
+    width: 0;
+    display: none;
+  }
+}
+
 .product-item {
   font-family: Roboto, sans-serif;
   font-weight: 600;
@@ -998,6 +1039,7 @@ a:hover {
 
 .product-item__subtotal {
   width: 10%;
+  margin-left: 1.5rem;
 }
 
 .product-item__subtotal::before {
@@ -1026,6 +1068,55 @@ a:hover {
   color: red;
 }
 
+@media (max-width: 640px) {
+  .product-item {
+    /* на узких экранах отключаю столбец с ценой */
+  }
+  .product-item__product {
+    display: flex;
+    width: 54%;
+  }
+  .product-item__price {
+    width: 0;
+    display: none;
+  }
+  .product-item__counter {
+    width: 25%;
+  }
+}
+
+@media (max-width: 540px) {
+  .product-item__product {
+    display: flex;
+    width: 44%;
+  }
+  .product-item__counter {
+    width: 30%;
+  }
+  .product-item__subtotal {
+    width: 15%;
+  }
+  .product-item__img {
+    display: none;
+  }
+  .product-item__img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .product-item__product {
+    width: 59%;
+  }
+  .product-item__counter {
+    width: 30%;
+  }
+  .product-item__subtotal {
+    width: 0;
+    display: none;
+  }
+}
+
 .cart-cheque {
   margin-top: 2rem;
   display: flex;
@@ -1038,7 +1129,7 @@ a:hover {
 }
 
 .cart-cheque ::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -1118,6 +1209,31 @@ a:hover {
   background-color: #51be42;
   margin-top: auto;
   transition: 0.3s all ease-in;
+}
+
+@media (max-width: 768px) {
+  .cart-cheque {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+  .cart-cheque__coupon {
+    padding: 2rem 2rem;
+  }
+  .cart-cheque__pieces-count span {
+    margin-right: 3.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .cart-cheque {
+    font-size: 1.7rem;
+  }
+  .cart-cheque__coupon {
+    padding: 1.7rem 1.7 rem;
+  }
+  .cart-cheque__pieces-count span {
+    margin-right: 3.5rem;
+  }
 }
 
 /* @import "header/header";

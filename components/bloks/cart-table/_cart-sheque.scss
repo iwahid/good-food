@@ -9,8 +9,8 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  & ::after { 
-    content: '';
+  & ::after {
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     padding: 3rem 2rem;
-    border-bottom: $border-easy;  
+    border-bottom: $border-easy;
   }
   &__pieces-count {
     display: flex;
@@ -56,7 +56,6 @@
     }
   }
   &__total {
-    
     display: flex;
     justify-content: space-between;
     padding: 3rem 2rem;
@@ -71,22 +70,52 @@
   }
   &__pay {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     padding: 3rem 2rem;
 
     & button {
       width: 100%;
-    background-color: transparent;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.7rem 1rem;
-    cursor: pointer;
-    color: $color-text-header;
-    font-weight: 500;
-    background-color: $color-accent;
-    margin-top: auto;
-    
-    transition: 0.3s all ease-in;
+      background-color: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.7rem 1rem;
+      cursor: pointer;
+      color: $color-text-header;
+      font-weight: 500;
+      background-color: $color-accent;
+      margin-top: auto;
+
+      transition: 0.3s all ease-in;
     }
+  }
+  @media (max-width: $screen-md) {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+
+    &__coupon {
+      padding: 2rem 2rem;
+    }
+
+    &__pieces-count {
+      & span {
+        margin-right: 3.5rem;
+      }
+    }
+  }
+  @media (max-width: $screen-xs) {
+   
+    font-size: 1.7rem;
+
+    &__coupon {
+      padding: 1.7rem 1.7
+      rem;
+    }
+
+    &__pieces-count {
+      & span {
+        margin-right: 3.5rem;
+      }
+    }
+    
   }
 }

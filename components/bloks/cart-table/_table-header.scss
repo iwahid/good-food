@@ -21,4 +21,47 @@
   &__product-delete {
     margin-left: auto;
   }
+  @media (max-width: $screen-sm) { /* на узких экранах отключаю столбец с ценой */
+    &__product-name {
+      width: 54%;
+    }
+
+    &__product-price {
+      width: 0;
+      display: none;
+    }
+    &__product-quantity {
+      width: 25%;
+    }
+  }
+  @media (max-width: $screen-xs) { 
+
+    &__product-name {
+      width: 44%;
+    }
+
+    &__product-quantity {
+      width: 25%;
+    }
+
+    &__product-subtotal {
+      width: 16%;
+    }
+  }
+  @media (max-width: $screen-xs) { 
+    
+    &__product-name {
+      width: 59%;
+    }
+
+    &__product-quantity {
+      width: 30%;
+    }
+
+    &__product-subtotal {
+      width: 0;
+      display: none;
+    }
+
+  }
 }
