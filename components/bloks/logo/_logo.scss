@@ -1,11 +1,11 @@
 .logo {
   position: relative;
   text-align: center;
-  width: 5em;
+
   font-family: "Oswald-SemiBold", sans-serif;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin: 10px;
+  margin: 10px 30px 10px 10px;
 
   &::before {
     position: absolute;
@@ -21,5 +21,13 @@
     left: 1.5em;
     font-size: inherit;
     color: inherit;
+  }
+
+  @media (max-width: $screen-xs) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: $screen-xxs) {
+    display: none;
   }
 }

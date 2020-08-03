@@ -596,12 +596,13 @@ a:hover {
 /* header */
 .header {
   color: #3a3d49;
-  font-size: 21px;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: white;
   box-shadow: 0 1px 5px 1px rgba(58, 61, 73, 0.5);
+  /* на 768 скрыть элементы ЛК и добавить кнопку мобильного меню */
 }
 
 .header__inner {
@@ -617,10 +618,49 @@ a:hover {
 
 .header__menu {
   width: 400px;
+  margin-right: 2rem;
 }
 
 .header__user-block {
   display: flex;
+}
+
+.header__mobile-menu-button {
+  font-size: 2.5rem;
+  display: none;
+}
+
+.header__mobile-menu-button button {
+  border: none;
+  cursor: pointer;
+  color: #3a3d49;
+  font-weight: 600;
+  padding: 0 0.5rem;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.7rem;
+  }
+  .header__user-block {
+    display: none;
+  }
+  .header__mobile-menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    font-size: 1.5rem;
+  }
+  .header__menu {
+    margin-right: 1.2rem;
+  }
+  .header__inner {
+    padding: 15px 5px;
+  }
 }
 
 .header-menu {
@@ -632,7 +672,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-right: 20px;
 }
 
 .header-menu__link {
@@ -650,14 +689,37 @@ a:hover {
   margin-bottom: 0.3em;
 }
 
+@media (max-width: 768px) {
+  .header-menu__item-img {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-bottom: 0.3em;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-menu {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .header-menu__item-title {
+    font-size: 1.4rem;
+  }
+  .header-menu__link {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
 .logo {
   position: relative;
   text-align: center;
-  width: 5em;
   font-family: "Oswald-SemiBold", sans-serif;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 700;
-  margin: 10px;
+  margin: 10px 30px 10px 10px;
 }
 
 .logo::before {
@@ -674,6 +736,18 @@ a:hover {
   left: 1.5em;
   font-size: inherit;
   color: inherit;
+}
+
+@media (max-width: 540px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .logo {
+    display: none;
+  }
 }
 
 .user-block {
@@ -880,13 +954,20 @@ a:hover {
   width: 25%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .cart__table {
+    width: 80%;
+    margin-right: 0;
+  }
   .cart__body {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media (max-width: 768px) {
   .cart__table {
     width: 100%;
     margin-right: 0;
@@ -897,6 +978,41 @@ a:hover {
     width: 100%;
     max-width: 40rem;
   }
+}
+
+.sidenav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* cart-page */
@@ -1250,9 +1366,6 @@ a:hover {
     position: absolute;
     content: "₽";
     margin-left: -1.5rem;
-  }
-  .cart-cheque__pay {
-    /* padding: 1.8rem 1.8rem; */
   }
   .cart-cheque__pay button {
     padding: 1.5rem 2rem;
