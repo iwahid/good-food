@@ -88,34 +88,54 @@
       transition: 0.3s all ease-in;
     }
   }
+
   @media (max-width: $screen-md) {
+
     margin-top: 5rem;
-    font-size: 1.5rem;
-
-    &__coupon {
-      padding: 2rem 2rem;
-    }
-
-    &__pieces-count {
-      & span {
-        margin-right: 3.5rem;
-      }
-    }
-  }
-  @media (max-width: $screen-xs) {
-   
     font-size: 1.7rem;
 
     &__coupon {
-      padding: 1.7rem 1.7
-      rem;
+      padding: 1.8rem 1.8rem;
     }
 
     &__pieces-count {
+      padding: 1.8rem 1.8rem;
       & span {
         margin-right: 3.5rem;
       }
     }
-    
+
+    &__subtotal {
+      padding: 1.8rem 1.8rem;
+      & span {
+        &::before {
+          position: absolute;
+          content: "₽";
+          margin-left: -1.5rem;
+        }
+      }
+    }
+    &__total {
+      padding: 1.8rem 1.8rem;
+      & span {
+        &::before {
+          position: absolute;
+          content: "₽";
+          margin-left: -1.5rem;
+        }
+      }
+    }
+
+    &__pay {  
+      /* padding: 1.8rem 1.8rem; */
+      & button {
+        padding: 1.5rem 2rem;
+        font-size: 2.2rem;
+      }
+    }
+
   }
-}
+
+
+
+} 

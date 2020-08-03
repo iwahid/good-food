@@ -763,6 +763,16 @@ a:hover {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .section__header {
+    padding: 1.5rem;
+  }
+  .section__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -1138,7 +1148,7 @@ a:hover {
   height: 8px;
   background-repeat: repeat-x;
   background-position: top left;
-  background-image: url("/components/bloks/cart-table/cart-cheque.svg");
+  background-image: url("./../components/bloks/cart-table/cart-cheque.svg");
 }
 
 .cart-cheque__coupon {
@@ -1214,25 +1224,39 @@ a:hover {
 @media (max-width: 768px) {
   .cart-cheque {
     margin-top: 5rem;
-    font-size: 1.5rem;
-  }
-  .cart-cheque__coupon {
-    padding: 2rem 2rem;
-  }
-  .cart-cheque__pieces-count span {
-    margin-right: 3.5rem;
-  }
-}
-
-@media (max-width: 540px) {
-  .cart-cheque {
     font-size: 1.7rem;
   }
   .cart-cheque__coupon {
-    padding: 1.7rem 1.7 rem;
+    padding: 1.8rem 1.8rem;
+  }
+  .cart-cheque__pieces-count {
+    padding: 1.8rem 1.8rem;
   }
   .cart-cheque__pieces-count span {
     margin-right: 3.5rem;
+  }
+  .cart-cheque__subtotal {
+    padding: 1.8rem 1.8rem;
+  }
+  .cart-cheque__subtotal span::before {
+    position: absolute;
+    content: "₽";
+    margin-left: -1.5rem;
+  }
+  .cart-cheque__total {
+    padding: 1.8rem 1.8rem;
+  }
+  .cart-cheque__total span::before {
+    position: absolute;
+    content: "₽";
+    margin-left: -1.5rem;
+  }
+  .cart-cheque__pay {
+    /* padding: 1.8rem 1.8rem; */
+  }
+  .cart-cheque__pay button {
+    padding: 1.5rem 2rem;
+    font-size: 2.2rem;
   }
 }
 

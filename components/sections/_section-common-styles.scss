@@ -10,4 +10,13 @@
     font-size: 4.9rem;
     font-weight: 700;
   }
+  @media (max-width: $screen-md) {
+    &__header {
+      padding: 1.5rem;
+    }
+    &__title {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+  }
 }
