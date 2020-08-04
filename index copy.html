@@ -22,20 +22,50 @@
 
   <!-- через миксины добавить стили для hover у почти всех ссылок
   На 640px меняю вид корзины -->
-<!--   <div id="mySidenav" class="sidenav">
-    <div class="header__mobile-menu-button header__mobile-menu-button--open">
-      <button class="js-header__mobile-menu" type="button">
+  <div id="mobile-menu" class="mobile-menu">
+
+    <div class="mobile-menu__header ">
+      <div class="mobile-menu__logo">
+        <a href="#" class="logo">
+          GF
+        </a>
+      </div>
+      <p>Меню</p>
+      <button class="mobile-menu__button mobile-menu__button--close" type="button">
         &#9776</button>
     </div>
-    <a href="tryhow_js_sidenav_full.php">О Нас</a>
-    <a href="tryhow_js_sidenav_full.php">Услуги</a>
-    <a href="tryhow_js_sidenav_full.php">Клиенты</a>
-    <a href="tryhow_js_sidenav_full.php">Контакт</a>
-  </div> -->
+    <div class="mobile-menu__content">
+
+      <div class="mobile-menu__profile">
+        <!-- <a href="#">Войти/зарегистрироваться</a> -->
+        <a href="#">Привет, Алиса!</a>
+        <a href="#">Корзина</a>
+        <a href="#">Список желаемого</a>
+        <a href="#">История заказов</a>
+      </div>
+      <div class="mobile-menu__link">
+        <a href="#">Главная</a>
+        <a href="#">Витрина</a>
+      </div>
+
+      <div class="mobile-menu__contacts">
+
+        <span>
+          Наш адрес: <br>
+          Ул. Пушкина д. Колотушкина кв. под номером ...
+        </span>
+
+      </div>
+
+      <a class="mobile-menu__logout" href="#">Выйти</a>
+    </div>
+
+
+  </div>
 
   <header class="header">
     <div class="container">
-      
+
       <div class="header__inner">
 
         <!-- logo -->
@@ -118,7 +148,7 @@
 
   </header>
 
-  
+
   <!-- 
   <section class="slider-section">
     <img class="slider-section__img" src="components/sections/slide-1.jpg" alt="">
@@ -333,14 +363,14 @@
 
     </section>
   </main>
+  <!-- <br>
   <br>
   <br>
   <br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
+  <br> -->
   <footer class="footer">
     <div class="container">
 
@@ -348,7 +378,7 @@
 
         <div class="footer__subscribe-form">
           <h4 class="footer__form-title">Подпишитесь на нашу рассылку
-            и узнавайте о акция быстрее</h4>
+            и узнавайте об акциях быстрее</h4>
           <form action="" class="footer__form">
             <input type="email" placeholder="Введите ваш e-mail" class="footer__form-input">
             <button class="footer__form-button" type="submit">Отправить</button>
@@ -363,7 +393,6 @@
               <li class="list-info__list-item"><a href="#">О компании</a></li>
               <li class="list-info__list-item"><a href="#">Контакты</a></li>
               <li class="list-info__list-item"><a href="#">Акции</a></li>
-              <li class="list-info__list-item"><a href="#">Магазины</a></li>
             </ul>
           </div>
           <div class="list-info__section">
@@ -377,7 +406,7 @@
           </div>
         </div>
 
-        <div class="footer__social-links">
+        <!-- <div class="footer__social-links">
           <h3 class="visually-hidden">Наши социальные сети</h3>
           <ul class="footer__social-buttons-list social-links">
             <li class="social-links__item social-links__item_facebook">
@@ -409,7 +438,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
 
       <div class="footer__bottom">

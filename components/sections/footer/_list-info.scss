@@ -1,0 +1,21 @@
+.list-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+
+  &__section {
+    &:last-child {
+      margin-left: 100px;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  &__list {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}

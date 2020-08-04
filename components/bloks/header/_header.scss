@@ -18,6 +18,13 @@
     display: flex;
   }
 
+  @media (max-width: $screen-xxs) {
+    &__logo {
+      display: none;
+    }
+  
+    
+  }
   &__menu {
     width: 400px;
     margin-right: 2rem;
@@ -57,6 +64,12 @@
     }
     &__inner {
       padding: 15px 5px;
+    }
+  }
+  @media (max-width: $screen-xxs) {
+    font-size: 1rem;
+    &__inner {
+      padding: 10px 5px;
     }
   }
 

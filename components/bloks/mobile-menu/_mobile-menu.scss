@@ -1,35 +1,91 @@
-.sidenav {
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 1100;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #fff;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align:center;
+  transition: color 0.5s; /* 
+  padding-top: 60px; */
+  text-align: left;
+
+  font-size: 2.5rem;
+  font-weight: 300;
+  /* display: none; */
+
+  &__logo {
+    display: flex;
+    position: relative;
+
+    padding-top: 0.6rem;
+    padding-left: 1.6rem;
+  }
+  &__header {
+    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* display: none; */
+
+    & button {
+      border: none;
+      cursor: pointer;
+      color: $color-text-header;
+      font-weight: 600;
+      padding: 0 0.5rem;
+      background-color: transparent;
+      padding-top: 0rem;
+      padding-right: 1.6rem;
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color-text-header;
+    
+  color: $color-text-light;
+
+    & a {
+      display: block;
+      transition: color 0.3s;
+      padding: 1rem 0;
+    }
+  }
+  &__profile {
+    margin-top: 1.6rem;
+    padding: 2rem 5rem;
+    border-bottom: $border-easy;
+  }
+
+  &__link {
+    margin-top: 1.6rem;
+    padding: 2rem 5rem;
+    border-bottom: $border-easy;
+  }
+  &__contacts {
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+    padding: 2rem 5rem;
+    border-bottom: $border-easy;
+  }
+  &__logout { 
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    margin-top: auto;
+  }
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-
-}
-
-.sidenav a:hover{
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.mobile-menu a:hover {
+  color: $color-text-regular;
 }
