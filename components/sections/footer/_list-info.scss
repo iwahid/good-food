@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  font-family: Roboto, sans-serif;
 
   &__section {
     &:last-child {
@@ -11,11 +10,20 @@
   }
   &__title {
     font-weight: bold;
-    font-size: 14px;
     line-height: 25px;
   }
   &__list {
-    font-size: 14px;
     line-height: 25px;
+  }
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+    width: 50%;
+    &__section {
+      &:last-child {
+        
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+    }
   }
 }
