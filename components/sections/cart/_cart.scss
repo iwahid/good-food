@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
   &__table {
     width: 70%;
@@ -17,8 +18,38 @@
     top: 10rem;
     width: 25%;
   }
+
+  &__empty {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+  }
+  &__empty-img {
+    margin-bottom: 5rem;
+    & img {
+      max-width: 30rem;
+    }
+  }
+  &__empty-title {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+  &__empty-return {
+    width: 100%;
+    max-width: 300px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    color: $color-text-header;
+    font-weight: 500;
+    background-color: $color-accent;
+    margin-top: auto;
+
+    transition: 0.3s all ease-in;
+  }
   @media (max-width: $screen-lg) {
-  
     &__body {
       margin-top: 5rem;
       display: flex;
@@ -32,7 +63,7 @@
     &__cheque {
       position: sticky;
       top: 10rem;
-      
+
       width: 100%;
       max-width: 40rem;
     }
@@ -42,6 +73,9 @@
       width: 100%;
       margin-right: 0;
     }
-    
+    &__empty-return {
+      font-size: 2rem;
+      padding: 1.5rem 2rem;
+    }
   }
 }

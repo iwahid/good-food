@@ -22,7 +22,7 @@
 
   <!-- через миксины добавить стили для hover у почти всех ссылок
   На 640px меняю вид корзины -->
-  <div id="mobile-menu" class="mobile-menu">
+  <div id="mobile-menu" class="mobile-menu mobile-menu--active">
 
     <div class="mobile-menu__header ">
       <div class="mobile-menu__logo">
@@ -31,13 +31,13 @@
         </a>
       </div>
       <p>Меню</p>
-      <button class="mobile-menu__button mobile-menu__button--close" type="button">
+      <button id="mobile-menu__button--close" class="mobile-menu__button" type="button">
         &#9776</button>
     </div>
     <div class="mobile-menu__content">
 
       <div class="mobile-menu__profile">
-        <!-- <a href="#">Войти/зарегистрироваться</a> -->
+        <a href="#">Войти / зарегистрироваться</a>
         <a href="#">Привет, Алиса!</a>
         <a href="#">Корзина</a>
         <a href="#">Список желаемого</a>
@@ -62,6 +62,9 @@
 
 
   </div>
+
+
+
 
   <header class="header">
     <div class="container">
@@ -138,8 +141,8 @@
 
         </div>
 
-        <div class="header__mobile-menu-button header__mobile-menu-button--open">
-          <button class="js-header__mobile-menu" type="button">
+        <div class="header__mobile-menu-button">
+          <button id="mobile-menu__button--open" type="button">
             &#9776</button>
         </div>
 
@@ -355,6 +358,18 @@
               <!-- пока не знаю как будет реализована оплата, и будет ли реализована в принципе. Поэтому, временно осталвю её кнопкой. -->
             </div>
           </div>
+
+
+          <!-- когда корзина пуста -->
+          <div class="cart__empty">
+            <div class="cart__empty-img">
+              <img src="components/sections/cart/empty-cart.jpg" alt="Cart is empty">
+            </div>
+            <h2 class="cart__empty-title">Ваша корзина пуста</h2>
+            <!-- FIXME: переписать на ссылку, когда буду собирать компоненты -->
+            <button class="cart__empty-return" type="button">Вернуться на главную</button>
+          </div>
+
         </div>
       </div>
 
@@ -376,25 +391,9 @@
 
       <div class="footer__top">
 
-        <div class="footer__subscribe-form">
-          <h4 class="footer__form-title">Подпишитесь на нашу рассылку
-            и узнавайте об акциях быстрее</h4>
-          <form action="" class="footer__form">
-            <input type="email" placeholder="Введите ваш e-mail" class="footer__form-input">
-            <button class="footer__form-button" type="submit">Отправить</button>
-          </form>
-        </div>
-
         <div class="footer__information-list list-info">
           <h3 class="visually-hidden">Полезная информация</h3>
-          <div class="list-info__section">
-            <h6 class="list-info__title">Информация</h6>
-            <ul class="list-info__list">
-              <li class="list-info__list-item"><a href="#">О компании</a></li>
-              <li class="list-info__list-item"><a href="#">Контакты</a></li>
-              <li class="list-info__list-item"><a href="#">Акции</a></li>
-            </ul>
-          </div>
+
           <div class="list-info__section">
             <h6 class="list-info__title">Интернет-магазин</h6>
             <ul class="list-info__list">
@@ -402,8 +401,19 @@
               <li class="list-info__list-item"><a href="#">Оплата</a></li>
               <li class="list-info__list-item"><a href="#">Возврат-обмен</a></li>
               <li class="list-info__list-item"><a href="#">Новости</a></li>
+              <li class="list-info__list-item"><a href="#">Акции</a></li>
+              <li class="list-info__list-item"><a href="#">Контакты</a></li>
             </ul>
           </div>
+        </div>
+
+        <div class="footer__subscribe-form">
+          <h4 class="footer__form-title">Подпишитесь 
+            и узнавайте об акциях быстрее</h4>
+          <form action="" class="footer__form">
+            <input type="email" placeholder="Введите ваш e-mail" class="footer__form-input">
+            <button class="footer__form-button" type="submit">Отправить</button>
+          </form>
         </div>
 
         <!-- <div class="footer__social-links">
@@ -440,18 +450,11 @@
           </ul>
         </div> -->
       </div>
-
-      <div class="footer__bottom">
-        <a href="#" class="footer__bottom-link">Договор оферты</a>
-        <a href="#" class="footer__bottom-link">Политика обработки персональных данных</a>
-      </div>
     </div>
   </footer>
 
-  <script src="./cscc/common-parts/sliderjs/js/swiper.min.js"></script><!-- сама библиотека свайпера -->
-  <script src="./cscc/common-parts/sliderjs/js/slider.js"></script>
-  <!-- инициализация всех свайперов доступных на странице -->
-  <script src="cscc/search-section/script.js"></script><!-- контент в табах -->
+
+  <script src="script.js"></script><!-- контент в табах -->
 </body>
 
 </html>
